@@ -35,6 +35,7 @@ public class Album {
             playList.add(this.songs.get(index));
             return true;
         }
+        System.out.println("Track " + trackNumber + " does not exist.");
         return false;
     }
 
@@ -44,6 +45,7 @@ public class Album {
             playList.add(song);
             return true;
         }
+        System.out.println("The song " + title + " is not in this album.");
         return false;
     }
 }
