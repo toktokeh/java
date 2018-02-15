@@ -1,8 +1,8 @@
 public class Song {
     private String title;
-    private String duration;
+    private double duration;
 
-    public Song(String title, String duration) {
+    public Song(String title, double duration) {
         this.title = title;
         this.duration = duration;
     }
@@ -11,7 +11,7 @@ public class Song {
         this.title = title;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(double duration) {
         this.duration = duration;
     }
 
@@ -19,7 +19,12 @@ public class Song {
         return this.title;
     }
 
-    public String getDuration() {
+    public double getDuration() {
         return this.duration;
+    }
+
+    @Override
+    public String toString() {
+        return this.title + ": " + this.duration;
     }
 }
