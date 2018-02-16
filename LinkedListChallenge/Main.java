@@ -106,9 +106,19 @@ public class Main {
                     }
                     break;
                 case 4:
-                    printList(playList);
+                    if (playList.size() > 0) {
+                        listIterator.remove();
+                        if (listIterator.hasNext()) {
+                            System.out.println("Now playing " + listIterator.next());
+                        } else if (listIterator.hasPrevious()) {
+                            System.out.println("Now playing " + listIterator.previous());
+                        }
+                    }
                     break;
                 case 5:
+                    printList(playList);
+                    break;
+                case 6:
                     printMenu();
                     break;
                 default:
@@ -125,8 +135,9 @@ public class Main {
                             "1 - Play next song\n" +
                             "2 - Play previous song\n" +
                             "3 - Replay current song\n" +
-                            "4 - List songs in playlist\n" +
-                            "5 - Print this menu\n");
+                            "4 - Remove current song\n" +
+                            "5 - List songs in playlist\n" +
+                            "6 - Print this menu\n");
     }
 
     private static void printList(LinkedList<Song> playList) {
