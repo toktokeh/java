@@ -10,5 +10,9 @@ class Main {
         healthyBurger.addHamburgerAddition1("Egg", 0.99);
         healthyBurger.addHealthAddition1("Alfalfa", 0.49);
         System.out.println("Total healthy burger price is $" + healthyBurger.itemizeHamburger());
+
+        DeluxeBurger deluxeBurger = new DeluxeBurger();
+        deluxeBurger.addHamburgerAddition3("Cheese", 1.12);
+        System.out.println("Total healthy burger price is $" + deluxeBurger.itemizeHamburger());
     }
 }
